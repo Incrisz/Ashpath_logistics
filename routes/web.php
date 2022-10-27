@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/clear', function(){
-    \Illuminate\Support\Facades\Artisan::call('optimize:clear');
+    \Illuminate\Support\Facades\Artisan::call('route:clear');
+     
     
     \Illuminate\Support\Facades\Artisan::call('route:cache');
 });
@@ -298,7 +299,7 @@ Route::name('user.')->prefix('user')->group(function () {
         Route::post('verify-g2fa', 'AuthorizationController@g2faVerification')->name('go2fa.verify');
     });
 });
-/*
+
 Route::get('/menu/{slug}/{id}', 'SiteController@footerMenu')->name('footer.menu');
 Route::get('/order/tracking', 'SiteController@orderTracking')->name('order.tracking');
 Route::get('/contact', 'SiteController@contact')->name('contact');
@@ -310,4 +311,3 @@ Route::get('blog/{id}/{slug}', 'SiteController@blogDetails')->name('blog.details
 Route::get('placeholder-image/{size}', 'SiteController@placeholderImage')->name('placeholder.image');
 Route::get('/{slug}', 'SiteController@pages')->name('pages');
 Route::get('/', 'SiteController@index')->name('home');
-*/

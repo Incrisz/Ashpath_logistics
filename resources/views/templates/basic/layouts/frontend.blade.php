@@ -27,12 +27,12 @@
     @stack('fbComment')
     <div class="overlay"></div>
     <a href="#0" class="scrollToTop"><i class="las la-angle-up"></i></a>
-    <div class="preloader">
+    <!--<div class="preloader">
         <div class="loader"></div>
-    </div>
-    @include($activeTemplate . 'partials.header')
+    </div>-->
+    <!--@include($activeTemplate . 'partials.header')-->
     @yield('content')
-    @include($activeTemplate . 'partials.footer')
+    <!--@include($activeTemplate . 'partials.footer')-->
     @php
         $cookie = App\Models\Frontend::where('data_keys','cookie.data')->first();
     @endphp
